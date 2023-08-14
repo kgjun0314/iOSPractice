@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="My9-jJ-cG0">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="hi7-Mn-jPS">
+            <objects>
+                <navigationController id="My9-jJ-cG0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OaK-gJ-fHt">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5JN-LA-KAu" kind="relationship" relationship="rootViewController" id="yrF-8O-zlq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jJD-DQ-PzM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-534" y="-15"/>
+        </scene>
+        <!--홈-->
+        <scene sceneID="DAE-0Z-UuA">
+            <objects>
+                <viewController id="5JN-LA-KAu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WoJ-37-jis">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cLV-Ri-uui"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="홈" id="Jvs-aU-HPk">
+                        <barButtonItem key="leftBarButtonItem" title="프로필" image="person.fill" catalog="system" id="SoS-ww-5AH">
+                            <connections>
+                                <segue destination="uFG-qo-SXF" kind="show" id="T5v-W4-qN4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="메시지" image="message.fill" catalog="system" id="zbk-Oi-QaL">
+                            <connections>
+                                <segue destination="Sbd-00-dke" kind="show" id="S3c-XI-wlJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nS8-UP-rH5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="471" y="-15"/>
+        </scene>
+        <!--메시지-->
+        <scene sceneID="Y31-ru-1Wg">
+            <objects>
+                <viewController id="Sbd-00-dke" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8LP-0z-UlH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="UvJ-LK-ezb"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="메시지" id="p4g-oL-mi4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CwQ-ex-EWS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1279" y="415"/>
+        </scene>
+        <!--프로필-->
+        <scene sceneID="yRx-hT-Z9D">
+            <objects>
+                <viewController id="uFG-qo-SXF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0TV-T8-nUC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="k91-DO-cjN"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="프로필" id="1Ds-lz-Ote"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0df-tB-Vea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1285" y="-221"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="message.fill" catalog="system" width="128" height="114"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
