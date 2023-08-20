@@ -7,8 +7,9 @@
 
 import UIKit
 import Toast_Swift
+import Alamofire
 
-class HomeVC: UIViewController, UISearchBarDelegate, UIGestureRecognizerDelegate {
+class HomeVC: BaseVC, UISearchBarDelegate, UIGestureRecognizerDelegate{
     @IBOutlet weak var searchFilterSegment: UISegmentedControl!
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -37,7 +38,7 @@ class HomeVC: UIViewController, UISearchBarDelegate, UIGestureRecognizerDelegate
        print("HomeVC - prepare() called / segue.identifier : \(segue.identifier)")
        
        switch segue.identifier {
-       case SEGUE_ID.USER_LIST_VC:
+       case SEGUE_ID.USER_LIST_VC: 
            // 다음 화면의 뷰컨트롤러를 가져온다.
            let nextVC = segue.destination as! UserListVC
            
@@ -110,18 +111,18 @@ class HomeVC: UIViewController, UISearchBarDelegate, UIGestureRecognizerDelegate
     
     
     @objc func keyboardWillShowHandle(notification: NSNotification){
-        print("HomeVC - keyboardWillShowHandle() called")
+//        print("HomeVC - keyboardWillShowHandle() called")
         // 키보드 사이즈 가져오기
 
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
 
-            print("keyboardSize.height: \(keyboardSize.height)")
-            print("searchButton.frame.origin.y : \(searchButton.frame.origin.y)")
+//            print("keyboardSize.height: \(keyboardSize.height)")
+//            print("searchButton.frame.origin.y : \(searchButton.frame.origin.y)")
 
             if(keyboardSize.height < searchButton.frame.origin.y){
-                print("키보드가 버튼을 덮었다.")
+//                print("키보드가 버튼을 덮었다.")
                 let distance = keyboardSize.height - searchButton.frame.origin.y
-                print("이만큼 덮었다. distance : \(distance)")
+//                print("이만큼 덮었다. distance : \(distance)")
                 if(distance < -20){
                     self.view.frame.origin.y = distance - searchButton.frame.height
                 }
@@ -131,7 +132,7 @@ class HomeVC: UIViewController, UISearchBarDelegate, UIGestureRecognizerDelegate
     }
 
     @objc func keyboardWillHideHandle(){
-        print("HomeVC - keyboardWillHideHandle() called")
+//        print("HomeVC - keyboardWillHideHandle() called")
         self.view.frame.origin.y = 0
     }
     
@@ -141,8 +142,55 @@ class HomeVC: UIViewController, UISearchBarDelegate, UIGestureRecognizerDelegate
     @IBAction func onSearchBtnClicked(_ sender: UIButton) {
         print("HomeVC - onSearchBtnClicked() called / index : \(searchFilterSegment.selectedSegmentIndex)")
         
-        pushVC()
+//        let url = API.BASE_URL + "search/photos"
+//
+        guard let userInput = self.searchBar.text else { return }
+//
+//        let queryParam = ["query" : userInput, "client_id" : API.CLIENT_ID]
+        
+//        AF.request(url, method: .get, parameters: queryParam).responseJSON(completionHandler: {response in
+//            debugPrint(response)
+//        })
+        
+        var urlToCall: URLRequestConvertible?
+        
+        switch searchFilterSegment.selectedSegmentIndex{
+        case 0:
+//            urlToCall = MySearchRouter.searchPhotos(term: userInput)
+            MyAlamofireManager
+                .shared
+                .getPhotos(searchTerm: userInput,completion: { [weak self] result in
+                    guard let self = self else { return }
+                    switch result {
+                    case .success(let fetchedPhotos):
+                        print("HomeVC - getPhotos.success - fetchedPhotos.count : \(fetchedPhotos.count)")
+                    case .failure(let error):
+                        print("HomeVC - getPhotos.failure - error : \(error.rawValue)")
+                        self.view.makeToast(error.rawValue, duration: 1.0, position: .center)
+                    }
+            })
+        case 1:
+            urlToCall = MySearchRouter.searchUsers(term: userInput)
+        default:
+            print("default")
+        }
+        
+//        if let urlConvertible = urlToCall{
+//            MyAlamofireManager
+//                .shared
+//                .session
+//                .request(urlConvertible)
+//                .validate(statusCode: 200..<401)
+//                .responseJSON(completionHandler: { response in
+//                    print("HomeVC - response : \(response)")
+//                    print("HomeVC - response.error : \(response.error)")
+//                })
+//        }
+        
+//        pushVC()
     }
+    
+    
     
     @IBAction func SearchFilterValueChanged(_ sender: UISegmentedControl) {
         print("HomeVC - SearchFilterValueChanged() called / index : \(sender.selectedSegmentIndex)")
@@ -151,11 +199,11 @@ class HomeVC: UIViewController, UISearchBarDelegate, UIGestureRecognizerDelegate
         
         switch sender.selectedSegmentIndex {
         case 0:
-            searchBarTitle = "Photo Keyword"
+            searchBarTitle = "photos"
         case 1:
-            searchBarTitle = "Name"
+            searchBarTitle = "users"
         default:
-            searchBarTitle = "Photo keyword"
+            searchBarTitle = "photos"
         }
         
         self.searchBar.placeholder = searchBarTitle

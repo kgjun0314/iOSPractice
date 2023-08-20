@@ -7,4 +7,6 @@ target 'Unsplash_with_storyboard' do
 
   # Pods for Unsplash_with_storyboard
   pod 'Toast-Swift', '~> 5.0.1'
+  pod 'Alamofire'
+  pod 'SwiftyJSON', '~> 4.0'
 end

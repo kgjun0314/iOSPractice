@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		464888BB2A92570300C65530 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464888BA2A92570300C65530 /* Photo.swift */; };
+		464888BD2A92576B00C65530 /* MyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464888BC2A92576B00C65530 /* MyError.swift */; };
+		465774822A909856007BFECE /* MySearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465774812A909856007BFECE /* MySearchRouter.swift */; };
+		465774842A909F66007BFECE /* MyApiStatusLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465774832A909F66007BFECE /* MyApiStatusLogger.swift */; };
 		4694D1BF2A8DFCB5003F1BEB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4694D1BE2A8DFCB5003F1BEB /* Constants.swift */; };
 		4694D1C12A8DFE30003F1BEB /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4694D1C02A8DFE30003F1BEB /* BaseVC.swift */; };
 		46E950102A8CF401003FA2BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E9500F2A8CF401003FA2BD /* AppDelegate.swift */; };
@@ -17,10 +21,17 @@
 		46E9501C2A8CF403003FA2BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E9501A2A8CF403003FA2BD /* LaunchScreen.storyboard */; };
 		46E950242A8CF738003FA2BD /* UserListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E950232A8CF738003FA2BD /* UserListVC.swift */; };
 		46E950262A8CF7AE003FA2BD /* PhotoCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E950252A8CF7AE003FA2BD /* PhotoCollectionVC.swift */; };
+		46EC56602A8F854B00E10F89 /* MyAlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EC565F2A8F854B00E10F89 /* MyAlamofireManager.swift */; };
+		46EC56622A8F860A00E10F89 /* BaseInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EC56612A8F860A00E10F89 /* BaseInterceptor.swift */; };
+		46EC56642A8F8C3600E10F89 /* MyLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EC56632A8F8C3600E10F89 /* MyLogger.swift */; };
 		F9CE9F14FC2EC867BA5D9305 /* Pods_Unsplash_with_storyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFCC60AB5C26A9B58583116 /* Pods_Unsplash_with_storyboard.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		464888BA2A92570300C65530 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		464888BC2A92576B00C65530 /* MyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyError.swift; sourceTree = "<group>"; };
+		465774812A909856007BFECE /* MySearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySearchRouter.swift; sourceTree = "<group>"; };
+		465774832A909F66007BFECE /* MyApiStatusLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApiStatusLogger.swift; sourceTree = "<group>"; };
 		4694D1BE2A8DFCB5003F1BEB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4694D1C02A8DFE30003F1BEB /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		46E9500C2A8CF401003FA2BD /* Unsplash_with_storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unsplash_with_storyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,6 +44,9 @@
 		46E9501D2A8CF403003FA2BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46E950232A8CF738003FA2BD /* UserListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListVC.swift; sourceTree = "<group>"; };
 		46E950252A8CF7AE003FA2BD /* PhotoCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionVC.swift; sourceTree = "<group>"; };
+		46EC565F2A8F854B00E10F89 /* MyAlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlamofireManager.swift; sourceTree = "<group>"; };
+		46EC56612A8F860A00E10F89 /* BaseInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInterceptor.swift; sourceTree = "<group>"; };
+		46EC56632A8F8C3600E10F89 /* MyLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLogger.swift; sourceTree = "<group>"; };
 		4FFCC60AB5C26A9B58583116 /* Pods_Unsplash_with_storyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Unsplash_with_storyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B8D475FAD53B16848903941 /* Pods-Unsplash_with_storyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unsplash_with_storyboard.debug.xcconfig"; path = "Target Support Files/Pods-Unsplash_with_storyboard/Pods-Unsplash_with_storyboard.debug.xcconfig"; sourceTree = "<group>"; };
 		950E1418DDB098195ABE35E6 /* Pods-Unsplash_with_storyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unsplash_with_storyboard.release.xcconfig"; path = "Target Support Files/Pods-Unsplash_with_storyboard/Pods-Unsplash_with_storyboard.release.xcconfig"; sourceTree = "<group>"; };
@@ -50,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		464888B92A9256ED00C65530 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				464888BA2A92570300C65530 /* Photo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		46635F232A8D06840072443F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				4694D1BE2A8DFCB5003F1BEB /* Constants.swift */,
+				464888BC2A92576B00C65530 /* MyError.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -90,6 +113,8 @@
 		46E9500E2A8CF401003FA2BD /* Unsplash_with_storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				464888B92A9256ED00C65530 /* Model */,
+				46EC565E2A8F853300E10F89 /* API */,
 				4694D1BD2A8DFCA1003F1BEB /* Utils */,
 				46635F232A8D06840072443F /* ViewControllers */,
 				46E9500F2A8CF401003FA2BD /* AppDelegate.swift */,
@@ -100,6 +125,18 @@
 				46E9501D2A8CF403003FA2BD /* Info.plist */,
 			);
 			path = Unsplash_with_storyboard;
+			sourceTree = "<group>";
+		};
+		46EC565E2A8F853300E10F89 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				465774812A909856007BFECE /* MySearchRouter.swift */,
+				46EC565F2A8F854B00E10F89 /* MyAlamofireManager.swift */,
+				46EC56612A8F860A00E10F89 /* BaseInterceptor.swift */,
+				46EC56632A8F8C3600E10F89 /* MyLogger.swift */,
+				465774832A909F66007BFECE /* MyApiStatusLogger.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		6D4CD6D3F2E62F5201A92085 /* Pods */ = {
@@ -238,8 +275,15 @@
 				46E950102A8CF401003FA2BD /* AppDelegate.swift in Sources */,
 				46E950122A8CF401003FA2BD /* SceneDelegate.swift in Sources */,
 				46E950242A8CF738003FA2BD /* UserListVC.swift in Sources */,
+				465774822A909856007BFECE /* MySearchRouter.swift in Sources */,
+				46EC56602A8F854B00E10F89 /* MyAlamofireManager.swift in Sources */,
+				464888BB2A92570300C65530 /* Photo.swift in Sources */,
 				46E950262A8CF7AE003FA2BD /* PhotoCollectionVC.swift in Sources */,
+				464888BD2A92576B00C65530 /* MyError.swift in Sources */,
+				46EC56622A8F860A00E10F89 /* BaseInterceptor.swift in Sources */,
+				46EC56642A8F8C3600E10F89 /* MyLogger.swift in Sources */,
 				4694D1C12A8DFE30003F1BEB /* BaseVC.swift in Sources */,
+				465774842A909F66007BFECE /* MyApiStatusLogger.swift in Sources */,
 				4694D1BF2A8DFCB5003F1BEB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
